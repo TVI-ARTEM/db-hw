@@ -3,7 +3,7 @@
 ## Homework - 4
 ---
 ## Библиотека
-![Библиотека 1](images/library_1.png)
+<img src="images/library_2.png" alt="Библиотека 1" width="200"/>
 ![Библиотека 2](images/library_2.png)
 
 ## Транспорт
