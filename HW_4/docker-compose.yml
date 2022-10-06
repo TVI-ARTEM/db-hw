@@ -1,0 +1,46 @@
+services:
+  db_1:
+    container_name: db_1
+    image: postgres:14.5
+    restart: always
+    environment:
+      POSTGRES_DB: "ZHULIN_204"
+      POSTGRES_USER: "ZHULIN_204"
+      POSTGRES_PASSWORD: "ZHULIN_204"
+      PGDATA: "/var/lib/postgresql/data/pgdata-1"
+    volumes:
+      - ./docker/db/scripts/HW4_1.sql:/docker-entrypoint-initdb.d/HW4_1.sql
+      - ./dz:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  db_2:
+    container_name: db_2
+    image: postgres:14.5
+    restart: always
+    environment:
+      POSTGRES_DB: "ZHULIN_204"
+      POSTGRES_USER: "ZHULIN_204"
+      POSTGRES_PASSWORD: "ZHULIN_204"
+      PGDATA: "/var/lib/postgresql/data/pgdata-2"
+    volumes:
+      - ./docker/db/scripts/HW4_2.sql:/docker-entrypoint-initdb.d/HW4_2.sql
+      - ./dz:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+
+  db_3:
+    container_name: db_3
+    image: postgres:14.5
+    restart: always
+    environment:
+      POSTGRES_DB: "ZHULIN_204"
+      POSTGRES_USER: "ZHULIN_204"
+      POSTGRES_PASSWORD: "ZHULIN_204"
+      PGDATA: "/var/lib/postgresql/data/pgdata-3"
+    volumes:
+      - ./docker/db/scripts/HW4_3.sql:/docker-entrypoint-initdb.d/HW4_3.sql 
+      - ./dz:/var/lib/postgresql/data
+    ports:
+      - "6432:5432"
